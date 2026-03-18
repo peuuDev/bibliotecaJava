@@ -16,14 +16,16 @@ public class Main {
             op = sc.nextInt();
             switch (op) {
                 case 1:
+                    sc.nextLine(); // Limpa o buffer do teclado (consome o \n do nextInt)
                     System.out.println("Nome do livro: ");
-                    String titulo = sc.nextLine(); 
-                    System.out.println("Autor do livro");
-                    String autor = sc.nextLine();
-                    Livro livro = new Livro(titulo, autor);
+                    String t = sc.nextLine(); 
+                    System.out.println("Autor do livro: ");
+                    String a = sc.nextLine();
+                    Livro livro = new Livro(t, a);
                     biblioteca.adicionarLivro(livro);
                     break;
-            
+                case 2:
+                    biblioteca.listarLivros();
                 default:
                     break;
             }
