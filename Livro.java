@@ -14,7 +14,7 @@ public class Livro {
     public void infoLivro(){
         System.out.println("Título: " + titulo);
         System.out.println("Autor: " + autor);
-        System.out.println("Livro está emprestado?: " + emprestado);
+        System.out.println("Status: " + (this.emprestado ? "Livro emprestado" : "Livro disponível"));
     }
 
     public String getTitulo(){

@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); Biblioteca biblioteca = new Biblioteca();
-        int op;
+        Livro default1 = new Livro("O livro de Ouro do Universo", "Ronaldo Mourão" ); biblioteca.adicionarLivro(default1); Livro default2 = new Livro("Origens", "Neil DeGreese Tyson"); biblioteca.adicionarLivro(default2); Livro default3 = new Livro("Cosmos", "Carl Sagan"); biblioteca.adicionarLivro(default3); 
         System.out.println("Bem-vindo à Bilbioteca Java!");
-
+        int op;
         do {
             System.out.println("\nMenu principal - Biblioteca Java");
             System.out.println("\n1 - Adicionar livro");
@@ -16,12 +16,7 @@ public class Main {
             op = sc.nextInt();
             switch (op) {
                 case 1:
-                    sc.nextLine(); // Limpa o buffer do teclado (consome o \n do nextInt)
-                    System.out.println("Nome do livro: ");
-                    String t = sc.nextLine(); 
-                    System.out.println("Autor do livro: ");
-                    String a = sc.nextLine();
-                    Livro livro = new Livro(t, a);
+                    Livro livro = new Livro(biblioteca.nomeLivro(), biblioteca.autorLivro());
                     biblioteca.adicionarLivro(livro);
                     break;
                 case 2:
