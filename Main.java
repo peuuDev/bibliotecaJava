@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); Biblioteca biblioteca = new Biblioteca();
-        Livro default1 = new Livro("O livro de Ouro do Universo", "Ronaldo Mourão" ); biblioteca.adicionarLivro(default1); Livro default2 = new Livro("Origens", "Neil DeGreese Tyson"); biblioteca.adicionarLivro(default2); Livro default3 = new Livro("Cosmos", "Carl Sagan"); biblioteca.adicionarLivro(default3); Livro default4 = new Livro("Uma breve história do tempo", "Stephen Hawking"); biblioteca.adicionarLivro(default4); Livro default5 = new Livro("Teoria da Relatividade: Sobre a Teoria da Relatividade Especial e Geral", "Albert Einstein");
+        Livro default1 = new Livro("O livro de Ouro do Universo", "Ronaldo Mourão" ); biblioteca.adicionarLivro(default1); Livro default2 = new Livro("Origens", "Neil DeGreese Tyson"); biblioteca.adicionarLivro(default2); Livro default3 = new Livro("Cosmos", "Carl Sagan"); biblioteca.adicionarLivro(default3); Livro default4 = new Livro("Uma breve história do tempo", "Stephen Hawking"); biblioteca.adicionarLivro(default4); Livro default5 = new Livro("Teoria da Relatividade: Sobre a Teoria da Relatividade Especial e Geral", "Albert Einstein"); biblioteca.adicionarLivro(default5);
         System.out.println("Bem-vindo à Bilbioteca Java!");
         int op;
         do {
@@ -27,7 +27,7 @@ public class Main {
                     biblioteca.emprestarLivro();
                     break;
                 case 4:
-                    
+                    biblioteca.devolverLivro();
                     break;
                 default:
                     break;
