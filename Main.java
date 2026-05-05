@@ -3,16 +3,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in); Biblioteca biblioteca = new Biblioteca();
-        Livro default1 = new Livro("O livro de Ouro do Universo", "Ronaldo Mourão" ); biblioteca.adicionarLivro(default1); Livro default2 = new Livro("Origens", "Neil DeGreese Tyson"); biblioteca.adicionarLivro(default2); Livro default3 = new Livro("Cosmos", "Carl Sagan"); biblioteca.adicionarLivro(default3); 
+        Livro default1 = new Livro("O livro de Ouro do Universo", "Ronaldo Mourão" ); biblioteca.adicionarLivro(default1); Livro default2 = new Livro("Origens", "Neil DeGreese Tyson"); biblioteca.adicionarLivro(default2); Livro default3 = new Livro("Cosmos", "Carl Sagan"); biblioteca.adicionarLivro(default3); Livro default4 = new Livro("Uma breve história do tempo", "Stephen Hawking"); biblioteca.adicionarLivro(default4); Livro default5 = new Livro("Teoria da Relatividade: Sobre a Teoria da Relatividade Especial e Geral", "Albert Einstein");
         System.out.println("Bem-vindo à Bilbioteca Java!");
         int op;
         do {
             System.out.println("\nMenu principal - Biblioteca Java");
-            System.out.println("\n1 - Adicionar livro");
-            System.out.println("2 - Listar livros");
-            System.out.println("3 - Emprestar livro");
-            System.out.println("4 - Devolver livro");
-            System.out.println("0 - Sair");
+            System.out.println("\n1 - Adicionar livro" +
+                "\n2 - Listar livros" +
+                "\n3 - Emprestar livro" +
+                "\n4 - Devolver livro" +
+                "\n0 - Sair"
+            );
             op = sc.nextInt();
             switch (op) {
                 case 1:
@@ -21,6 +22,13 @@ public class Main {
                     break;
                 case 2:
                     biblioteca.listarLivros();
+                    break;
+                case 3:
+                    biblioteca.emprestarLivro();
+                    break;
+                case 4:
+                    
+                    break;
                 default:
                     break;
             }

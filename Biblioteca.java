@@ -2,7 +2,29 @@ package Dev1.POO.biblioteca;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Biblioteca {
-    private ArrayList<Livro> livros = new ArrayList<>(); private Scanner sc = new Scanner(System.in); 
+    private ArrayList<Livro> livros = new ArrayList<>();
+    private Scanner sc = new Scanner(System.in);
+
+    public void devolverLivro(){
+        
+    }
+
+    public void emprestarLivro(){
+        int i = 1;
+        System.out.println("Livros disponíveis para empréstimo:\n");
+        for(Livro livro : livros){
+            if (livro.getEmprestado() == false) {
+                System.out.println(i + "º Livro: ");
+                livro.infoLivro();
+                i++;
+            }
+            System.out.println();
+        }
+        System.out.println("Selecione o número do livro que deseja pegar emprestado: ");
+        int emp = sc.nextInt() - 1;
+        (livros.get(emp)).emprestar();
+        System.out.println("'" + (livros.get(emp)).getTitulo() + "' foi emprestado para você!");
+    }
 
     public String nomeLivro(){
         System.out.println("Nome do livro: ");
